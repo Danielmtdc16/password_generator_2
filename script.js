@@ -13,31 +13,25 @@ const list_name_checkbox = [capital_letter, lower_letter, special_character, num
 const list_elements = [capital_letters, lower_letters, special_characters, numbers];
 
 function randomValue(str) {
-    return Math.floor(Math.random() * str.length);
+    return Math.floor(Math.random() * str);
 }
 
 function character_generate(checkbox, elements) {
     if (checkbox.checked) {
-        return elements.charAt(randomValue(elements));
+        return elements.charAt(randomValue(elements.length));
     } else {
         return "";
     }
 }
-
 function generate() {
 
     if (password_length.value < 8 || password_length.value == "") password_length.value = 8;
 
     if (special_character.checked || capital_letter.checked || lower_letter.checked || number.checked) {
-        
         let password = "";
-        let i = 0;
         while (password.length < password_length.value) {
-            if (i == 4){
-                i = 0;
-            }
+            let i = randomValue(4);
             password += character_generate(list_name_checkbox[i], list_elements[i]);
-            i++;
         }
 
         result_field.innerHTML = password;

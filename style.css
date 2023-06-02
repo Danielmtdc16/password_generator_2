@@ -32,6 +32,10 @@ body {
     padding: 2rem;
 }
 
+.title {
+    text-align: center;
+}
+
 .info_field {
     display: flex;
     align-items: center;
@@ -58,10 +62,6 @@ body {
 .option {
     display: flex;
     justify-content: space-between;
-}
-
-.checkbox {
-    height: 20px;
 }
 
 .result_button {
