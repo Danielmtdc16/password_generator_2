@@ -8,3 +8,13 @@ let result_field = document.getElementById("result_field");
 function randomValue(str) {
     return Math.floor(Math.random() * str.length);
 }
+
+function generate() {
+
+    if ((password_length.value != "" && password_length.value != 0) && (special_characters.checked || capital_letters.checked || lower_letters.checked || numbers.checked)) {
+        
+        
+
+    }
+
+}
